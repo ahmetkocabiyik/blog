@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'ahmetkocabiyik@gmail.com', 'name' => "Yazılım Dünyası"],
 
     /*
     |--------------------------------------------------------------------------

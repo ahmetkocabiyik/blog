@@ -1,0 +1,98 @@
+#topbar
+{
+    background: rgba(0,0,0,0.5);
+    color:#fff;
+    font-size: 14px;
+
+    text-align: right;
+}
+#topbar ul
+{
+    margin: 0px;
+    padding: 10px;
+}
+#topbar li
+{
+
+    display: inline-block;
+    list-style-type: none;
+}
+#topbar li a
+{
+    color: #bbb;
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+
+}
+#topbar li a:hover
+{
+    color:#fff
+}
+#topbar li a i
+{
+    display: inline-block;
+    margin-right: 5px;
+}
+#topbar .uyelik-tus
+{
+    color: #fff;
+
+}
+#topbar .uyelik-tus:hover
+{
+    color: #0085A1;
+
+}
+.mavi-back
+{
+    background: #0085A1;
+}
+
+nav .dropdown-menu
+{
+    margin-top: 40px;
+    top:30px;
+    text-align: right;
+    background: rgba(0,0,0,0.8);
+}
+nav .dropdown-menu li a:hover
+{
+    background: #0085A1;
+}
+
+.eylem
+{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 22px;
+    text-align: center;
+}
+.m-b-20
+{
+    margin-bottom: 20px;
+}
+.m-b-40
+{
+    margin-bottom: 40px;
+}
+
+input[type=file]
+{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: 4px;
+}
+
+li.divider
+{
+    display: block !important;
+    background-color: #333 !important;
+
+}
