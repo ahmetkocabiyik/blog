@@ -111,7 +111,14 @@ return [
     'attributes' => [
         'email' => 'Email',
         'password' => "Şifre",
-        'name' => 'İsim'
+        'name' => 'İsim',
+        'baslik' => "Başlık",
+        "author" => "Yazar",
+        "aciklama" => "Açıklama",
+        "keywords" => "Keywords",
+        "facebook" => "Facebook",
+        "twitter" => "Twitter",
+        "github" => "Github"
     ],
 
 ];
