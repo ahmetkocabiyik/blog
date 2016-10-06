@@ -2,11 +2,11 @@
  * Created by ahmetbusra on 30.09.2016.
  */
 
-//$.ajaxSetup({
-//    headers: {
-//        'X-CSRF-TOKEN':csrfToken
-//    }
-//});
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN':csrfToken
+    }
+});
 
 $(function(){
     toastr.options = {
@@ -44,7 +44,7 @@ $(function(){
 
     }
     //
-    //$('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
     //
     //
     //

@@ -118,7 +118,8 @@ return [
         "keywords" => "Keywords",
         "facebook" => "Facebook",
         "twitter" => "Twitter",
-        "github" => "Github"
+        "github" => "Github",
+        "rol" => "Rol"
     ],
 
 ];
