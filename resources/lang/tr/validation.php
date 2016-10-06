@@ -119,7 +119,8 @@ return [
         "facebook" => "Facebook",
         "twitter" => "Twitter",
         "github" => "Github",
-        "rol" => "Rol"
+        "rol" => "Rol",
+        "resim" => "Resim"
     ],
 
 ];
