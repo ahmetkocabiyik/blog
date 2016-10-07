@@ -28,6 +28,8 @@ Route::group(["middleware" => ["admin_mi","auth"]],function(){
         Route::put("/site-ayarlari/guncelle","AyarController@guncelle");
         Route::resource("user","UserController");
         Route::resource("kategori","KategoriController");
+        Route::resource("makale","MakaleController");
+        Route::post("makale/durum-degis","MakaleController@durumDegis");
 
     });
 });

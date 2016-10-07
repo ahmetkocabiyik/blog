@@ -120,7 +120,9 @@ return [
         "twitter" => "Twitter",
         "github" => "Github",
         "rol" => "Rol",
-        "resim" => "Resim"
+        "resim" => "Resim",
+        "icerik" => "İçerik",
+        "kategori_id" => "Kategori",
     ],
 
 ];
