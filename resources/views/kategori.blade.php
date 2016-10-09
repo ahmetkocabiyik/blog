@@ -3,14 +3,14 @@
 @section('icerik')
         <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+<header class="intro-header" style="background-image: url('{{asset("uploads/".$kategori->resim->isim)}}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{!! config("ayarlar.baslik") !!}</h1>
-                    <hr class="small">
-                    <span class="subheading">{!! config("ayarlar.aciklama") !!}</span>
+                <div class="post-heading">
+                    <h1>{{$kategori->baslik}}</h1>
+
+                    <span class="meta">kategorisindeki makaleler.</span>
                 </div>
             </div>
         </div>

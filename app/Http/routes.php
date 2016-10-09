@@ -29,7 +29,7 @@ Route::group(["middleware" => ["admin_mi","auth"]],function(){
         Route::resource("user","UserController");
         Route::resource("kategori","KategoriController");
         Route::resource("makale","MakaleController");
-        Route::post("makale/durum-degis","MakaleController@durumDegis");
+        Route::post("/makale/durum-degis","MakaleController@durumDegis");
         Route::get("/talep","TalepController@index");
         Route::post("/talep/durum-degis","TalepController@durumDegis");
         Route::delete("/talep/{id}","TalepController@destroy")->name("talep.destroy");
@@ -48,5 +48,9 @@ Route::group(["middleware" => ["yazar_mi","auth"]],function(){
 
 Route::get("/yazarlik-talebi","YazarlikTalepController@index");
 Route::post("/yazarlik-talebi/gonder","YazarlikTalepController@gonder");
+
+
+Route::get("/yayinlanan-makale/{slug}","MakaleController@index");
+Route::get("/yayinlanan-kategori/{slug}","KategoriController@index");
 
 

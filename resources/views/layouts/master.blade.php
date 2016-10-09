@@ -99,18 +99,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="post.html">Sample Post</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
+               @foreach(App\Kategori::all() as $kategori)
+                   <li>
+                       <a href="/yayinlanan-kategori/{{$kategori->slug}}">{{$kategori->baslik}}</a>
+                   </li>
+                   @endforeach
             </ul>
         </div>
         <!-- /.navbar-collapse -->

@@ -24,7 +24,7 @@ class MakaleController extends Controller
     {
         //
 
-        $makaleler = Makale::paginate(10);
+        $makaleler = Makale::orderBy("created_at","desc")->paginate(10);
         return view("admin.makale_index",compact('makaleler'));
     }
 
@@ -66,10 +66,11 @@ class MakaleController extends Controller
 
         if($resim = $request->file("resim"))
         {
-            $resim_isim = time().".".$resim->getClientOriginalExtension();
-            $thumb = "thumb_".time().".".$resim->getClientOriginalExtension();
+            $time = time();
+            $resim_isim = $time.".".$resim->getClientOriginalExtension();
+            $thumb = "thumb_".$time.".".$resim->getClientOriginalExtension();
 
-            Image::make($resim->getRealPath())->fit(1900,872)->fill(array(0,0,0,0.5))->save(public_path("uploads/".$resim_isim));
+            Image::make($resim->getRealPath())->fit(1900,872)->fill(array(0,0,0,0.65))->save(public_path("uploads/".$resim_isim));
             Image::make($resim->getRealPath())->fit(600,400)->save(public_path("uploads/".$thumb));
 
             $input = [];
@@ -139,7 +140,7 @@ class MakaleController extends Controller
             $resim_isim = $makale->resim->isim;
             $thumb = "thumb_".$makale->resim->isim;
 
-            Image::make($resim->getRealPath())->fit(1900,872)->fill(array(0,0,0,0.5))->save(public_path("uploads/".$resim_isim));
+            Image::make($resim->getRealPath())->fit(1900,872)->fill(array(0,0,0,0.65))->save(public_path("uploads/".$resim_isim));
             Image::make($resim->getRealPath())->fit(600,400)->save(public_path("uploads/".$thumb));
 
 
@@ -160,10 +161,10 @@ class MakaleController extends Controller
         //
         $makale_resim = Makale::find($id)->resim->isim;
 
-        unlink(public_path("uploads/".$makale_resim));
-        unlink(public_path("uploads/thumb_".$makale_resim));
+        @unlink(public_path("uploads/".$makale_resim));
+        @unlink(public_path("uploads/thumb_".$makale_resim));
 
-        Resim::where("imageable_id",$id)->where("imageable_type","App\Kategori")->delete();
+        Resim::where("imageable_id",$id)->where("imageable_type","App\Makale")->delete();
 
         Makale::destroy($id);
 
