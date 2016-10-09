@@ -40,6 +40,10 @@ $(function(){
             toastr.info('İşlem başarılı fakat yönetici onayladıktan sonra aktifleşecektir.');
             break;
 
+        case 3 :
+            toastr.warning('Zaten daha önce yazarlık talebinde bulunmuşsunuz.');
+            break;
+
 
 
     }
